@@ -48,7 +48,7 @@ const networking =
 
       // cache
       requestCache[reactotronCounter] = {
-        data: data,
+        data,
         xhr,
         stopTimer: reactotron.startTimer(),
       }
