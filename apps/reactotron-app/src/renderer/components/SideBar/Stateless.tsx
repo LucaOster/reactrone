@@ -1,6 +1,7 @@
 import React from "react"
 import { MdReorder, MdAssignment, MdPhoneIphone, MdLiveHelp } from "react-icons/md"
 import { FaMagic } from "react-icons/fa"
+import { SiApollographql } from "react-icons/si"
 import styled from "styled-components"
 
 import SideBarButton from "../SideBarButton"
@@ -42,6 +43,12 @@ function SideBar({ isOpen }: { isOpen: boolean }) {
         text="React Native"
       />
       <SideBarButton icon={FaMagic} path="/customCommands" text="Custom Commands" iconSize={25} />
+      <SideBarButton
+        icon={SiApollographql}
+        path="/apolloClient/cache"
+        matchPath="/apolloClient"
+        text="Apollo Client"
+      />
       <Spacer />
       <SideBarButton icon={MdLiveHelp} path="/help" text="Help" hideTopBar />
     </SideBarContainer>
