@@ -23,6 +23,7 @@ const COMMON_MATCHING_PATHS = [
   path("payload", "triggerType"),
   path("payload", "description"),
   path("payload", "request", "url"),
+  path("payload", "value"),
 ]
 
 export function filterSearch(commands: any[], search: string) {
@@ -33,6 +34,8 @@ export function filterSearch(commands: any[], search: string) {
   const searchRegex = new RegExp(trimmedSearch.replace(/\s/, "."), "i")
 
   const matching = (value: string) => value && typeof value === "string" && searchRegex.test(value)
+  const matchingObj = (value: object) =>
+    value && typeof value === "object" && searchRegex.test(JSON.stringify(value))
 
   return commands.filter(
     (command) =>
@@ -44,6 +47,7 @@ export function filterSearch(commands: any[], search: string) {
         )
           return true
         if (command.type === CommandType.ClientIntro && matching("connection")) return true
+        if (command.type === CommandType.Display && matchingObj(command.payload.value)) return true
         return false
       }).length > 0
   )
