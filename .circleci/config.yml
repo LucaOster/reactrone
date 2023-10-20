@@ -295,7 +295,6 @@ workflows:
   publish_to_docs_site:
     jobs:
       - publish-docs/publish_docs:
-          <<: *defaults
           description: >-
             Reactotron - A desktop app for inspecting your React JS and React Native projects.
           git_email: ci@infinite.red
