@@ -4,6 +4,7 @@ import { format as formatUrl } from "url"
 import log from "electron-log"
 import { autoUpdater } from "electron-updater"
 import windowStateKeeper from "electron-window-state"
+import installExtension, { REACT_DEVELOPER_TOOLS } from 'electron-extension-installer';
 
 import createMenu from "./menu"
 
@@ -97,4 +98,16 @@ app.on("activate", () => {
 // create main BrowserWindow when electron is ready
 app.on("ready", () => {
   mainWindow = createMainWindow()
+
+  if(isDevelopment){
+    // Install the react dev tools into electron for use in debugging reactotron
+    installExtension(REACT_DEVELOPER_TOOLS, {
+      loadExtensionOptions: {
+          allowFileAccess: true
+      },
+      forceDownload: false,
+    })
+    .then((name) => console.log(`Added Extension:  ${name}`))
+    .catch((err) => console.log('An error occurred: ', err));
+  }
 })
