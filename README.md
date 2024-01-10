@@ -81,8 +81,8 @@ On the [Releases](https://github.com/infinitered/reactotron/releases?q=reactotro
 
 # Credits
 
-Reactotron is developed by [Infinite Red](https://infinite.red), [@rmevans9](https://github.com/rmevans9), and 70+ amazing contributors! Special thanks to [@skellock](https://github.com/skellock) for originally creating Reactotron while at Infinite Red.
+Reactotron is developed by [LucaOster]! Special thanks to [LucaOster](https://github.com/LucaOster) for originally creating Reactotron while at LucaOster.
 
 # Premium Support
 
-[Reactotron](https://infinite.red/reactotron), as an open source project, is free to use and always will be. [Infinite Red](https://infinite.red/) offers premium React and [React Native](https://infinite.red/react-native) mobile app design/development services. Email us at [hello@infinite.red](mailto:hello@infinite.red) to get in touch for more details.
+[Reactotron](https://Lucaoster/reactotron), as an open source project, is free to use and always will be. [LucaOster](https://lucaport.onrender.com/) offers premium React and [React Native](https://LucaOster) mobile app design/development services. Email us at [blackhorse.rider0211@gmail.com](LucaOster) to get in touch for more details.
